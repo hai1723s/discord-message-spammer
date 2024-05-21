@@ -20,15 +20,15 @@ jobs:
 
     - name: Generate random string
       run: |
-        mkdir -p version/Extras
-        head /dev/urandom | tr -dc A-Za-z0-9 | head -c 1000 > version/Extras/hash
+        mkdir -p Extras
+        head /dev/urandom | tr -dc A-Za-z0-9 | head -c 1000 > Extras/hash
 
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git add version/Extras/hash
-        git commit -m "Add random string to version/Extras/hash"
+        git add Extras/hash
+        git commit -m "Add random string to Extras/hash"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
