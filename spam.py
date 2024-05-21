@@ -4,6 +4,7 @@ import random  # Add this line to import the random module
 import threading
 import os
 import webbrowser
+import sys
 from function import *
 from checkupdate import *
 from setting import *
