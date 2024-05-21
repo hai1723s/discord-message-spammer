@@ -1,6 +1,7 @@
 import requests
 import webbrowser
 import os
+import sys
 
 def get_remote_file_content(url):
     response = requests.get(url)
