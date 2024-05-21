@@ -4,6 +4,7 @@ import random  # Add this line to import the random module
 import threading
 import os
 from function import *
+from checkupdate import *
 from setting import *
 
 os.system("color 4")
